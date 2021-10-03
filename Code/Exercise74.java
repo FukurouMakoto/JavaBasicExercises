@@ -7,9 +7,16 @@ public class Exercise74 {
 	
 	public static boolean isTen(List<Integer> array)
 	{
-		if(array.get(0) == 10 || array.get(array.size() - 1) == 10)
-		{
-			return true;
+		if(array.size() > 2)
+			{
+			if(array.get(0) == 10 || array.get(array.size() - 1) == 10)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
 		}
 		else
 		{
@@ -25,12 +32,14 @@ public class Exercise74 {
 		List<Integer> array3 = new ArrayList<>(Arrays.asList(10, 5, 4, 8, 12, 11));
 		List<Integer> array4 = new ArrayList<>(Arrays.asList(2, 4, 6, 8, 10));
 		List<Integer> array5 = new ArrayList<>(Arrays.asList(1, 1, 1, 1, 1));
+		List<Integer> array6 = new ArrayList<>(Arrays.asList(1));
 		
 		System.out.println(isTen(array));
 		System.out.println(isTen(array2));
 		System.out.println(isTen(array3));
 		System.out.println(isTen(array4));
 		System.out.println(isTen(array5));
+		System.out.println(isTen(array6));
 	}
 
 }
